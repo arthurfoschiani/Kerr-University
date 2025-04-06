@@ -1,0 +1,63 @@
+.header {
+    width: 80%;
+    padding: 32px 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #FFF;
+
+    >p {
+        font-size: 32px;
+        color: #8B5F11;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .options {
+        display: flex;
+        gap: 32px;
+        font-size: 18px;
+
+        .option {
+            cursor: pointer;
+        }
+    }
+
+    .buttons-action {
+        display: flex;
+        border: 2px solid #1D263B;
+        border-radius: 12px;
+
+        >div {
+            border-radius: 9px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .login {
+            background-color: #1D263B;
+            color: #FFF;
+            padding: 8px 32px;
+
+            p {
+                font-weight: 600;
+            }
+        }
+
+        .sign-in {
+            background-color: #FFF;
+            color: #1D263B;
+            padding: 8px 32px 8px 24px;
+            border-radius: 12px;
+            cursor: pointer;
+
+            p {
+                font-weight: 500;
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.landing-page {
+
+    .content-page {
+        margin: 0 60px;
+        display: flex;
+        justify-content: space-between;
+
+        .board-initial {
+            background-image: url('/assets/images/Background_Image_Homepage.jpg');
+            background-size: cover;
+            background-position: center;
+            height: calc(100vh - 170px);
+            border-radius: 32px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0px 4px 8px #CFCFCF;
+            align-items: center;
+            width: 50%;
+            position: sticky;
+            top: 115px;
+
+            .informations {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 100px;
+                width: 90%;
+                
+                .principal {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+
+                    .title {
+                        color: #DBD3C3;
+                        font-size: 52px;
+                        font-family: 'Playfair Display', serif;
+                        width: 70%;
+                        font-weight: 500;
+                        text-align: center;
+                        text-shadow: 0px 8px 24px #000;
+                    }
+
+                    .subtitle {
+                        color: #FFF;
+                        font-size: 20px;
+                        font-weight: 100;
+                        width: 70%;
+                        text-align: center;
+                        text-shadow: 0px 8px 24px #000;
+                    }
+                }
+
+                .button {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    padding: 4px 20px 4px 24px;
+                    border-radius: 12px;
+                    background-color: #000;
+                    cursor: pointer;
+
+                    >p {
+                        color: #FFF;
+                        font-size: 20px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .login-body {
+            width: 50%;
+        }
+    }
+}

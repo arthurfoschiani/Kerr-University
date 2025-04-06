@@ -1,0 +1,112 @@
+<div class="landing-page">
+    <div class="header">
+        <p routerLink="/">KerrUniversity</p>
+        <div class="options">
+            <p class="option">Topic 1</p>
+            <p class="option">Topic 2</p>
+            <p class="option">Topic 3</p>
+        </div>
+        <div class="buttons-action">
+            <div class="login" routerLink="/login" >
+                <p>Login</p>
+            </div>
+            <div class="sign-in" routerLink="/sign-up" >
+                <p>Sign In</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="board-initial">
+        <div class="informations">
+            <div class="principal">
+                <p class="title">Empower Your Future with Kerr University</p>
+                <p class="subtitle">Join our innovative platform to master English and excel in global business.</p>
+            </div>
+            <div class="button">
+                <p>Explore Our Courses</p>
+                <img src="/assets/icons/chevron-white.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="about-us">
+        <p class="subtitle">About Us</p>
+        <div class="content">
+            <div class="title">Why Choose Kerr University?</div>
+            <p class="text">Founded in 2022 by Digby R. Kerr, Kerr University offers personalized English as a Second Language (ESL) and business mentoring for learners at all levels. Our focus on conversational learning and practical teaching methods ensures you gain the skills and confidence needed to thrive in today's global environment.</p>
+        </div>
+    </div>
+
+    <div class="master-person">
+        <div class="card">
+            <p class="description">Digby R. Kerr is a renowned business leader, mentor, and author with expertise in global logistics, advertising, recruitment, and business strategy. As a serial entrepreneur, he has built and led successful ventures, including Logistics Consulting, Inc. Beyond business, Digby is a passionate ESL tutor, empowering students worldwide to master English and excel professionally through his tailored mentorship, e-books, and courses.</p>
+            <p class="author">Digby R. Kerr</p>
+        </div>
+    </div>
+
+    <div class="language-subscriptions">
+        <p class="title">Language subscriptions</p>
+        <div class="plans">
+            @for (plan of plans; track plan.id) {
+                <div class="plan" [class.most-popular]="plan.mostPopular">
+                    @if (plan.mostPopular) {
+                        <p class="most-popular-badge">Most Popular</p>
+                    }
+                    <p class="title">{{ plan.title }}</p>
+                    <div class="price">
+                        <p>$ {{ plan.price.toFixed(2) }}</p>
+                        @if (plan.pricePer) { 
+                            <p>{{ plan.pricePer }}</p>
+                        } @else {
+                            <p>Save <span>${{ plan.discount }}</span></p>
+                        }
+                    </div>
+                    <div class="details">
+                        @for (feature of plan.features; track $index) {
+                            <div class="detail">
+                                <img [src]="plan.mostPopular ? '/assets/icons/checked-white.svg' : '/assets/icons/checked-blue.svg'" alt="">
+                                <p>{{ feature }}</p>
+                            </div>
+                        }
+                    </div>
+                    <button>{{ plan.buttonText }}</button>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="faq">
+        <p class="title">Frequently Asked Questions</p>
+        <div class="content">
+            <div class="questions">
+                @for (faq of faqs; track faq.id) {
+                    <div class="question" [class.selected]="faq.isActive" (click)="selectFAQ(faq.id)">
+                        <div class="info">
+                            <div class="ball"></div>
+                            <p>{{ faq.question }}</p>
+                        </div>
+                        <img src="/assets/icons/chevron-brown.svg" alt="">
+                    </div>
+                }
+            </div>
+            <div class="answer">
+                <p class="question">{{ activeFAQ?.question }}</p>
+                <p class="description">{{ activeFAQ?.answer }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="content">
+            <p class="title">Get in Touch</p>
+            <div class="contact-info">
+                <p>KerrUniversity.com</p>
+                <p>Empire State Building, 350 5th Avenue , New York City, NY 10118</p>
+                <p>727-342-9731</p>
+                <p>WhatsApp +1-727-342-9731</p>
+                <p>Sales&#64;KerrUniversity.com</p>
+                <p>Legal Notice | Privacy</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+.input-space {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    >p {
+        font-size: 24px;
+        color: #1D263B;
+    }
+    
+    >input {
+        border: none;
+        padding: 10px;
+        font-size: 24px;
+        border-bottom: #1D263B 2px solid;
+        outline: none;
+        box-shadow: none;
+    }
+
+    >input::placeholder {
+        color: #A7A7A7;
+        font-style: italic;
+    }
+}
