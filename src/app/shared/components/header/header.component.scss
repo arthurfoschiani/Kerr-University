@@ -10,7 +10,7 @@
     background-color: #FFF;
 
     >p {
-        font-size: 32px;
+        font-size: 2em;
         color: #8B5F11;
         font-weight: 600;
         cursor: pointer;
@@ -19,7 +19,7 @@
     .options {
         display: flex;
         gap: 32px;
-        font-size: 18px;
+        font-size: 1em;
 
         .option {
             cursor: pointer;
@@ -36,6 +36,10 @@
             cursor: pointer;
             display: flex;
             align-items: center;
+        }
+
+        p {
+            font-size: 1em;
         }
 
         .login {
