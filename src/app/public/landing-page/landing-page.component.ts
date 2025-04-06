@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SUBSCRIPTION_PLANS } from '../constants/subscription-plans.constants';
 import { FAQ_LIST } from '../constants/faq.constants';
+import { HeaderComponent } from '../../shared/components/header/header.component';
 
 @Component({
   selector: 'landing-page',
-  imports: [ RouterModule ],
+  imports: [ RouterModule, HeaderComponent ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
